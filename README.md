@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/joseptnl/Humble-Superhero-App/blob/master/humble-superhero.webp" width="200" alt="App logo" />
+  <img src="https://github.com/joseptnl/Humble-Superhero-App/blob/master/humble-superhero.webp" width="200" styles="border-radius: 50%;" alt="App logo" />
 </p>
 
   <p align="center">App to rank superheroes by their humility.</p>
