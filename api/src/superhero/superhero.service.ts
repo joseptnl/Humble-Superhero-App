@@ -17,4 +17,8 @@ export class SuperheroService {
             }
         });
     }
+
+    create(createSuperheroDto: CreateSuperheroDto): Promise<Superhero> {
+        return this.superheroRepository.create([createSuperheroDto])
+    }
 }
