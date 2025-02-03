@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing'
-import { INestApplication } from '@nestjs/common'
+import { INestApplication, ValidationPipe } from '@nestjs/common'
 import * as request from 'supertest'
 import { App } from 'supertest/types'
 import { SuperheroModule } from '../src/superhero/superhero.module'
@@ -32,6 +32,15 @@ describe('Superhero (e2e)', () => {
     }).compile()
 
     app = moduleFixture.createNestApplication()
+
+    app.useGlobalPipes(
+      new ValidationPipe({
+        transform: true,
+        whitelist: true,
+        forbidNonWhitelisted: true,
+      })
+    )
+
     await app.init()
 
     dataSource = moduleFixture.get<DataSource>(DataSource)
@@ -61,6 +70,15 @@ describe('Superhero (e2e)', () => {
       const response = await request(app.getHttpServer()).post('/superheroes').send(superhero).expect(201)
 
       expect({ ...response.body, id: undefined }).toEqual(superhero)
+    })
+
+    it('Returns 400 code when try to create superhero with humility out of range [1..10]', async () => {
+      const superhero: Partial<Superhero> = { name: 'Joker', power: 'Crazyness', humility: -5 }
+
+      const response = await request(app.getHttpServer()).post('/superheroes').send(superhero).expect(400)
+
+      expect(response.body).toHaveProperty('message')
+      expect(response.body.message).toEqual(['humility must not be less than 1'])
     })
   })
 })

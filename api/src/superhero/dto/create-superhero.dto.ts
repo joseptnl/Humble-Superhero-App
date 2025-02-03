@@ -1,4 +1,4 @@
-import { IsNumber, IsString } from 'class-validator'
+import { IsNumber, IsString, Max, Min } from 'class-validator'
 
 export class CreateSuperheroDto {
   @IsString()
@@ -8,5 +8,7 @@ export class CreateSuperheroDto {
   power: string
 
   @IsNumber()
+  @Max(10)
+  @Min(1)
   humility: number
 }
