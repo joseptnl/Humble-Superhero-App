@@ -1,16 +1,16 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm'
 
 @Entity()
 export class Superhero {
-    @PrimaryGeneratedColumn()
-    id: number;
+  @PrimaryGeneratedColumn()
+  id: number
 
-    @Column()
-    name: string;
+  @Column()
+  name: string
 
-    @Column()
-    power: string;
+  @Column()
+  power: string
 
-    @Column()
-    humility: number;
+  @Column()
+  humility: number
 }

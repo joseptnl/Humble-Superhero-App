@@ -1,4 +1,12 @@
-import { OmitType } from '@nestjs/mapped-types';
-import { Superhero } from '../entities/superhero.entity';
+import { IsNumber, IsString } from 'class-validator'
 
-export class CreateSuperheroDto extends OmitType(Superhero, ['id'] as const) {}
+export class CreateSuperheroDto {
+  @IsString()
+  name: string
+
+  @IsString()
+  superpower: string
+
+  @IsNumber()
+  humility: number
+}
