@@ -5,7 +5,7 @@ export class CreateSuperheroDto {
   name: string
 
   @IsString()
-  superpower: string
+  power: string
 
   @IsNumber()
   humility: number
