@@ -6,7 +6,7 @@ export class SuperheroController {
     constructor(private readonly superheroService: SuperheroService) { }
 
   @Get()
-  getHello(): string {
-      return "Hola";
+  get() {
+      return this.superheroService.findAll();
   }
 }
