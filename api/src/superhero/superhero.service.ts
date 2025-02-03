@@ -11,6 +11,10 @@ export class SuperheroService {
     ) { }
 
     findAll(): Promise<Superhero[]> {
-        return this.superheroRepository.find();
+        return this.superheroRepository.find({
+            order: {
+                humility: "DESC",
+            }
+        });
     }
 }
