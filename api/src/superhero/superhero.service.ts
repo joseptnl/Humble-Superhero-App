@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common'
 import { InjectRepository } from '@nestjs/typeorm'
 import { Superhero } from './entities/superhero.entity'
-import { Repository } from 'typeorm'
+import { InsertResult, Repository } from 'typeorm'
 import { CreateSuperheroDto } from './dto/create-superhero.dto'
 import { v4 } from 'uuid'
 
@@ -28,8 +28,7 @@ export class SuperheroService {
    *
    * @param createSuperheroDto
    */
-  create(createSuperheroDto: CreateSuperheroDto): Superhero {
-    const [superhero] = this.superheroRepository.create([{ ...createSuperheroDto, id: v4() }])
-    return superhero
+  create(createSuperheroDto: CreateSuperheroDto): Promise<InsertResult> {
+    return this.superheroRepository.insert({ ...createSuperheroDto, id: v4() })
   }
 }
