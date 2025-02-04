@@ -18,10 +18,13 @@ export default function CreationForm({ onCreate }: CreationFormProps) {
   const [error, setError] = useState("");
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement>,
-    field: keyof CreateSuperheroDto
+    field: keyof CreateSuperheroDto,
+    value: string | number
   ) => {
-    setFormData({ ...formData, [field]: e.target });
+    setFormData({
+      ...formData,
+      [field]: value,
+    });
   };
 
   const addItem = async () => {
@@ -60,7 +63,7 @@ export default function CreationForm({ onCreate }: CreationFormProps) {
             id="name"
             name="name"
             value={formData.name}
-            onChange={(e) => handleChange(e, "name")}
+            onChange={(e) => handleChange("name", e.target.value)}
             placeholder="Enter name"
           />
         </div>
@@ -70,7 +73,7 @@ export default function CreationForm({ onCreate }: CreationFormProps) {
             id="power"
             name="power"
             value={formData.power}
-            onChange={(e) => handleChange(e, "power")}
+            onChange={(e) => handleChange("power", e.target.value)}
             placeholder="Enter power"
           />
         </div>
@@ -81,7 +84,9 @@ export default function CreationForm({ onCreate }: CreationFormProps) {
             name="humility"
             type="number"
             value={formData.humility}
-            onChange={(e) => handleChange(e, "humility")}
+            onChange={(e) =>
+              handleChange("humility", parseFloat(e.target.value))
+            }
             placeholder="Enter humility level"
           />
         </div>
