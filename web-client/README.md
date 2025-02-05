@@ -1,50 +1,21 @@
-# React + TypeScript + Vite
+# Web Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Web Client made in **React** to play with API endpoints.
 
-Currently, two official plugins are available:
+## Build & Run
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The development has been carried out using nodejs `v22.13.1`. Hence, the ideal version to use if you don't want to worry about dependecy issues is that one.
 
-## Expanding the ESLint configuration
+First you must run:
+`npm install`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Once all dependencies are installed you can run in **dev** environment executing:
+`npm run dev`
 
-- Configure the top-level `parserOptions` property like this:
+If everything went alright, you must be able to see the app at http://localhost:5173/.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+**Note**: Do not forget to run API too, otherwise client won't be able to call the endpoints. You can find API project in the root folder of the same monorepo where web-client is located.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Shadcn & Tailwind
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+The components used in the app are built upon Shadcn components like cards, inputs & buttons. Tailwind is also used to avoid css styles headaches.
