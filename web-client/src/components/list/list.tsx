@@ -13,7 +13,7 @@ export default function List() {
         loadSuperheroes();
     }, []);
 
-    async function loadSuperheroes() {
+    function loadSuperheroes() {
         setLoading(true);
         get().then(superheroes => {
             setError(false)
