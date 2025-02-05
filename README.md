@@ -10,6 +10,8 @@ Monorepo that has both the `api` and the `web-client` of the **Humble Superhero 
 
 The **Humble Superhero App** allows the users to create Superheroes adding a name, a superpower and a humility score for each of them. Then, all the created superheroes can be listed to find out which is the most or least humble.
 
+To check how to run app see `api` and `web-client` projects readme.
+
 ## Team
 
 If I had to collaborate with at least one other developer, I would split the application into different features (e.g., the GET endpoint or a new endpoint for deletion). Each feature would become a task or a set of tasks. Then, I would add these tasks to a Kanban board using tools like Jira or Azure DevOps. Finally, each of us would pick up one task at a time. Task assignment would be done dynamically, based on the required skills and priority.
