@@ -12,9 +12,7 @@ The **Humble Superhero App** allows the users to create Superheroes adding a nam
 
 ## Team
 
-I have been the only developer of the application. Generally, on software projects, collaborative environments are needed to create a really impactful code. However, collaboration can be tough, specially when there are no systems or strategies that make all team members push together towards the same direction.
-
-If I would have to collaborate with at least one developer, I would split the application in different features (e.g. the get endpoint or a new endpoint to delete). Each feature would become a task or a set of tasks. Then, I would throw the tasks into a Kanban board using tools like Jira or Azure DevOps. Finally, each one of us would start developing a task at a time. The assignation of each task would be done dynamicaly, based on the needed skills and its priority.
+If I had to collaborate with at least one developer, I would split the application in different features (e.g. the get endpoint or a new endpoint to delete). Each feature would become a task or a set of tasks. Then, I would throw the tasks into a Kanban board using tools like Jira or Azure DevOps. Finally, each one of us would start developing a task at a time. The assignation of each task would be done dynamicaly, based on the needed skills and its priority.
 
 An other agile methodology that, in my opinion, could be a plus in bigger teams or in large development roadmaps, is Scrum. What I feel is the most interesting part of that methodology are the retrospectives done after each sprint.
 
