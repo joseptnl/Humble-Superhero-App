@@ -43,6 +43,7 @@ export default function CreationForm({ onCreate }: CreationFormProps) {
 
     try {
       await create(formData);
+      setError("");
     } catch {
       setError("Cant create the Superhero :(");
       return;

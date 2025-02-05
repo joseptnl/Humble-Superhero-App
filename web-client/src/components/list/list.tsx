@@ -6,7 +6,7 @@ import { Loader2 } from "lucide-react";
 
 export default function List() {
   const [superheroes, setSuperheroes] = useState<Superhero[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(true);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function List() {
       <CreationForm onCreate={() => loadSuperheroes()} />
       <div className="space-y-4">
         {loading ? (
-          <Loader2 className="animate-spin" />
+          <Loader2 className="animate-spin mx-auto" />
         ) : error ? (
           <p className="text-red-500 text-center">
             There was an error fetching superheroes, try again.
