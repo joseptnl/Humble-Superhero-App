@@ -1,5 +1,4 @@
 import List from "./components/list/list";
-import "./index.css";
 
 function App() {
   return (
