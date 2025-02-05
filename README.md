@@ -14,7 +14,7 @@ The **Humble Superhero App** allows the users to create Superheroes adding a nam
 
 If I had to collaborate with at least one other developer, I would split the application into different features (e.g., the GET endpoint or a new endpoint for deletion). Each feature would become a task or a set of tasks. Then, I would add these tasks to a Kanban board using tools like Jira or Azure DevOps. Finally, each of us would pick up one task at a time. Task assignment would be done dynamically, based on the required skills and priority.
 
-Another agile methodology that, in my opinion, could be a great addition for larger teams or extensive development roadmaps is Scrum. What I find most interesting about this methodology is the retrospective meetings held after each sprint.
+Another agile methodology that, in my opinion, could be a great addition with an extensive development roadmap is Scrum. What I find most interesting about this methodology is the retrospective meetings held after each sprint. As a result, we could improve collaboration.
 
 Lastly, we would also need to establish a Git workflow. Since we would be a two-member team working with Kanban, a simple and effective way to manage Git branches would be by using a feature branch workflow. Each feature would be developed in its own branch, which would be merged into master once completed.
 
