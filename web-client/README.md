@@ -2,17 +2,15 @@
 
 Web Client made in **React** to play with API endpoints.
 
-## Build & Run
+## Project setup
 
 The development has been carried out using nodejs `v22.13.1`. Hence, the ideal version to use if you don't want to worry about dependecy issues is that one.
-
-First you must run:
 
 ```bash
 $ npm install
 ```
 
-Once all dependencies are installed you can run in **dev** environment executing:
+## Compile and run the project
 
 ```bash
 $ npm run dev
