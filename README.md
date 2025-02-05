@@ -12,15 +12,24 @@ The **Humble Superhero App** allows the users to create Superheroes adding a nam
 
 ## Team
 
-If I had to collaborate with at least one developer, I would split the application in different features (e.g. the get endpoint or a new endpoint to delete). Each feature would become a task or a set of tasks. Then, I would throw the tasks into a Kanban board using tools like Jira or Azure DevOps. Finally, each one of us would start developing a task at a time. The assignation of each task would be done dynamicaly, based on the needed skills and its priority.
+If I had to collaborate with at least one other developer, I would split the application into different features (e.g., the GET endpoint or a new endpoint for deletion). Each feature would become a task or a set of tasks. Then, I would add these tasks to a Kanban board using tools like Jira or Azure DevOps. Finally, each of us would pick up one task at a time. Task assignment would be done dynamically, based on the required skills and priority.
 
-An other agile methodology that, in my opinion, could be a plus in bigger teams or in large development roadmaps, is Scrum. What I feel is the most interesting part of that methodology are the retrospectives done after each sprint.
+Another agile methodology that, in my opinion, could be a great addition for larger teams or extensive development roadmaps is Scrum. What I find most interesting about this methodology is the retrospective meetings held after each sprint.
 
-Finally, we would also need to set a git workflow. Being a two-members team working with Kanban, a simple way to handle git branches would be by using a branch for each feature (Git Feature Branch Workflow). When a feature is finished, the branch is merged to master.
+Lastly, we would also need to establish a Git workflow. Since we would be a two-member team working with Kanban, a simple and effective way to manage Git branches would be by using a feature branch workflow. Each feature would be developed in its own branch, which would be merged into master once completed.
 
 ## If I had more time
 
-As the title says, "If I had more time..." I would expand the list features creating a whole CRUD for superheroes. Instead of just adding, I would also implement the update and the delete features.
+As the title says, "If I had more time...", I would expand the list of features by creating a full CRUD for superheroes. Instead of just adding them, I would also implement update and delete functionalities. Additionally, it could be interesting to check for already existing superheroes by name and prevent duplicates. This would require expanding the logic of the create endpoints to include extra validation.
+
+Other interesting features I came up with include:
+
+1. Creating a custom filter to search by name or superpower. This would involve adding parameters to the /get endpoint and using them to filter at the repository layer.
+2. Implementing a Superpower entity that can be assigned to multiple superheroes. To achieve this, we would need to create a new Superpower model and establish a one-to-many (1..n) relationship with Superhero.
+3. Building a dashboard to display the average humility for each superpower.
+4. Implementing additional features, such as login/logout with tokens (potentially use login with third-party providers), user networking, real-time visibility of superheroes created by other users, etc.
+
+Finally, from an infrastructure perspective, I would like to experiment with databases such as MySQL or MongoDB (diving deeper into NoSQL, especially for real-time functionalities), use the cloud to host the application, and, if scalability demands it, explore microservices, edge computing, messaging queues, etc.
 
 ## Stay in touch
 
