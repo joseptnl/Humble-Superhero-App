@@ -28,7 +28,9 @@ export class SuperheroService {
    *
    * @param createSuperheroDto
    */
-  create(createSuperheroDto: CreateSuperheroDto): Promise<InsertResult> {
-    return this.superheroRepository.insert({ ...createSuperheroDto, id: v4() })
+  async create(createSuperheroDto: CreateSuperheroDto): Promise<Superhero> {
+    const created = this.superheroRepository.create([{ ...createSuperheroDto, id: v4() }])
+    const [newSuperhero] = await this.superheroRepository.save(created)
+    return newSuperhero
   }
 }
