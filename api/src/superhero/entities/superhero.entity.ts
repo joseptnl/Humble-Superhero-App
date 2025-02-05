@@ -11,6 +11,6 @@ export class Superhero {
   @Column()
   power: string
 
-  @Column()
+  @Column('numeric', { precision: 10, scale: 2 })
   humility: number
 }
