@@ -18,7 +18,7 @@ $ npm run dev
 
 If everything went alright, you must be able to see the app at http://localhost:5173/. Check the command output to see exactly the port the application is running on.
 
-**Note**: Do not forget to run API too, otherwise client won't be able to call the endpoints. You can find API project in the root folder of the same monorepo where web-client is located.
+**Note**: Sometimes, due to dev mode issue, tailwind styles do not load the first time opening in browser. If that is the case just reload the page.
 
 ## Shadcn & Tailwind
 
